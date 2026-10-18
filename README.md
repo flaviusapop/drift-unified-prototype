@@ -28,10 +28,10 @@ digests combine) is still to be decided by Zander.
 
 ## Layout
 
-- `index.html` — weeks index; each week shows 2 cards (Brief A + Brief B)
+- `index.html` — minimal weeks index only: a vertical list of weeks, each linking to its week page
 - `weeks/2026-10-12.html` — one sample week (Week 42) with both briefs in
   Drift style: `Brief/Week header · date range · strip · Fold all`,
-  foldable sections, priority-thread cards, top-comments folds
+  foldable sections, a dark Brief A → Brief B divider band, priority-thread cards, top-comments folds
 - `style.css` — Drift design DNA copied read-only from `flaviusapop/ai-digest`
   (`src/drift.html`: cream/dark editorial, Chivo + Sometype Mono, 660px
   measure, mobile-first) + small prototype additions (banner, cards)
@@ -45,7 +45,7 @@ structure/headline. Neither is a new collected edition.
 
 1. Edit HTML/CSS/JS directly (plain static, no build step).
 2. Add a week: copy `weeks/2026-10-12.html`, change the Week header/date,
-   replace sample cards, add a matching 2-card block to `index.html`.
+   replace sample cards, add a matching week row to the list in `index.html`.
 3. Rename briefs: search for `Brief A` / `Brief B` once final names land.
 4. Publish: `git add -A && git commit -m "..." && git push` — GitHub Pages
    serves `main` / root, redeploys in ~1 min.

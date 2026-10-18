@@ -257,3 +257,26 @@ a{color:inherit}
 .back{display:inline-flex;min-height:44px;align-items:center;font-family:var(--m);font-size:11px;color:var(--mute);text-decoration:none}
 .tag{display:inline-block;font-family:var(--m);font-size:10px;padding:2px 7px;background:var(--deep);border-radius:3px;color:var(--ink-2)}
 footer a{text-decoration:underline;text-underline-offset:3px}
+
+/* ---- v2: index week-list only ---- */
+.weeks{padding:34px 20px 56px}
+.weeks h1{font-weight:900;font-size:clamp(28px,8vw,40px);line-height:1;letter-spacing:-.045em;margin:0 0 8px}
+.weeks .sub{margin:0 0 22px;color:var(--mute);font-size:14px}
+.week-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--edge)}
+.week-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 2px;border-bottom:1px solid var(--edge-soft);text-decoration:none;color:inherit;min-height:64px}
+a.week-row:hover .week-name{text-decoration:underline;text-underline-offset:4px}
+.week-name{font-weight:800;font-size:20px;letter-spacing:-.03em}
+.week-meta{font-family:var(--m);font-size:10.5px;color:var(--mute);white-space:nowrap;font-variant-numeric:tabular-nums}
+.week-row.is-disabled{opacity:.5}
+.week-row .arr{font-family:var(--m);color:var(--mute)}
+
+/* ---- v2: Brief A -> Brief B divider band ---- */
+.brief-divider{background:var(--ink);color:var(--bg);border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);padding:34px 0 38px;margin:36px 0 8px}
+.brief-divider .bd-k{font-family:var(--m);font-size:10px;letter-spacing:.1em;text-transform:uppercase;opacity:.65}
+.brief-divider .bd-end{display:block;font-size:14px;font-weight:600;margin-top:10px;opacity:.75}
+.brief-divider .bd-rule{display:block;height:1px;background:currentColor;opacity:.35;margin:20px 0}
+.brief-divider .bd-start{display:block;font-weight:900;font-size:clamp(26px,7vw,36px);line-height:1.02;letter-spacing:-.04em}
+.brief-divider p{margin:10px 0 0;font-size:14.5px;line-height:1.55;max-width:42ch;opacity:.8}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .brief-divider{background:var(--deep);color:var(--ink);border-color:var(--edge)}
+}
