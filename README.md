@@ -37,6 +37,8 @@ digests combine) is still to be decided by Zander.
   measure, mobile-first) + small prototype additions (banner, cards)
 - `app.js` — fold/unfold, Fold all, Compact (key-points) toggle; no backend
 
+Visual system: `style.css` is the original Drift stylesheet verbatim plus a small additions block that reuses only original Drift tokens/patterns (type scale, `--h-*` hues, `.brk-band` divider, `.srch/.srtoggle` subreddit headers, original fold motion). No invented sizes, colours or transitions.
+
 Sample content is clearly labelled PROTOTYPE: Brief A reuses the Oct 18
 learning-plan structure; Brief B reuses Drift Brief 35 (Aug 21–26, 2026)
 structure/headline. Neither is a new collected edition.

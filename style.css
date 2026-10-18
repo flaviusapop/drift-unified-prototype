@@ -234,91 +234,56 @@ footer{padding:30px 0 40px}
 footer p{margin:0 0 9px;font-size:12.5px;color:var(--mute);line-height:1.7}
 @media (prefers-reduced-motion:reduce){*{transition-duration:.01ms !important}}
 
-/* ---- prototype additions (unified 2-brief iteration) ---- */
-.proto-banner{background:var(--ink);color:var(--bg);padding:10px 0;font-family:var(--m);font-size:11px;letter-spacing:.06em;text-transform:uppercase}
-.proto-banner .w{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-.badge-proto{border:1px solid currentColor;padding:2px 7px;border-radius:999px}
-.cards{display:grid;gap:14px;padding:22px 0 8px}
-@media(min-width:620px){.cards{grid-template-columns:1fr 1fr}}
-.brief-card{border:1px solid var(--edge);background:var(--panel);padding:18px;text-decoration:none;color:inherit;display:block}
-.brief-card:hover{border-color:var(--ink)}
-.brief-card .k{font-family:var(--m);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
-.brief-card h3{margin:8px 0 6px;font-size:22px;line-height:1.1;letter-spacing:-.03em}
-.brief-card p{margin:0;color:var(--ink-2);font-size:14.5px;line-height:1.55}
-.brief-card .meta{margin-top:14px;font-family:var(--m);font-size:10.5px;color:var(--mute);display:flex;gap:12px;flex-wrap:wrap}
-.brief-card.disabled{opacity:.55;pointer-events:none}
-.week-block{padding:26px 0 6px;border-top:1px solid var(--edge)}
-.week-block:first-of-type{border-top:0}
-.week-title{display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap}
-.week-title h2{margin:0;font-size:24px;letter-spacing:-.03em}
-.todo{margin:18px 0;padding:14px 16px;background:var(--deep);border-left:3px solid var(--ink);font-size:14px;line-height:1.55;color:var(--ink-2)}
-.todo b{color:var(--ink)}
+/* ---- prototype additions: ONLY original Drift tokens/patterns ----
+   Every value below is copied from the original Drift stylesheet above:
+   type scale (.intro h1, .srtoggle, .jrow, .brk-band, .callout, badges),
+   colour tokens (--bg/--panel/--deep/--ink/--mute/--edge, --h-* hues),
+   spacing and the fold motion defined in the base rules. No new tokens,
+   sizes, colours, transitions or easing are introduced here. */
+
+/* small prototype strip: original .top .live pattern */
+.proto-banner{background:var(--bg);color:var(--mute);border-bottom:1px solid var(--edge-soft);padding:10px 0;font-family:var(--m);font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+.proto-banner .w{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.badge-proto{display:inline-flex;align-items:center;gap:3px;padding:1px 6px;background:var(--deep);border-radius:3px;color:var(--ink-2);font-weight:500;font-size:10px}
 a{color:inherit}
-.back{display:inline-flex;min-height:44px;align-items:center;font-family:var(--m);font-size:11px;color:var(--mute);text-decoration:none}
-.tag{display:inline-block;font-family:var(--m);font-size:10px;padding:2px 7px;background:var(--deep);border-radius:3px;color:var(--ink-2)}
-footer a{text-decoration:underline;text-underline-offset:3px}
+/* back link: original .tc-pl pattern */
+.back{display:inline-flex;min-height:44px;align-items:center;font-family:var(--m);font-size:10.5px;color:var(--mute);text-decoration:none;border-bottom:1px solid var(--edge);padding:2px 0}
+.back:hover{color:var(--ink);border-bottom-color:currentColor}
+footer a{color:inherit;text-decoration:none;border-bottom:1px solid var(--edge)}
+footer a:hover{color:var(--ink);border-bottom-color:currentColor}
 
-/* ---- v2: index week-list only ---- */
-.weeks{padding:34px 20px 56px}
-.weeks h1{font-weight:900;font-size:clamp(28px,8vw,40px);line-height:1;letter-spacing:-.045em;margin:0 0 8px}
-.weeks .sub{margin:0 0 22px;color:var(--mute);font-size:14px}
-.week-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--edge)}
-.week-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 2px;border-bottom:1px solid var(--edge-soft);text-decoration:none;color:inherit;min-height:64px}
-a.week-row:hover .week-name{text-decoration:underline;text-underline-offset:4px}
-.week-name{font-weight:800;font-size:20px;letter-spacing:-.03em}
-.week-meta{font-family:var(--m);font-size:10.5px;color:var(--mute);white-space:nowrap;font-variant-numeric:tabular-nums}
-.week-row.is-disabled{opacity:.5}
-.week-row .arr{font-family:var(--m);color:var(--mute)}
+/* index weeks list: .intro + .jrow patterns at original scale */
+.weeks{padding:44px 20px 34px;border-bottom:1px solid var(--edge)}
+.weeks h1{font-weight:900;font-size:clamp(34px,10vw,52px);line-height:.98;letter-spacing:-.05em;margin:0;text-wrap:balance;max-width:15ch}
+.weeks .sub{margin:20px 0 0;font-size:16.5px;line-height:1.55;color:var(--ink-2);max-width:42ch}
+.week-list{list-style:none;margin:26px 0 0;padding:16px 0 0;border-top:1px solid var(--edge-soft)}
+.week-row{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:50px;padding:0;border-top:1px solid var(--edge-soft);text-decoration:none;color:inherit}
+.week-row:first-child{border-top:0}
+.week-name{font-weight:600;font-size:15.5px;letter-spacing:-.02em}
+a.week-row:hover .week-name{text-decoration:underline;text-underline-offset:3px}
+.week-meta{font-family:var(--m);font-size:10.5px;color:var(--mute);font-variant-numeric:tabular-nums;white-space:nowrap}
+.week-row .arr{font-family:var(--m);font-size:10.5px;color:var(--mute)}
+.week-row.is-disabled .week-name,.week-row.is-disabled .week-meta{color:var(--dead)}
 
-/* ---- v2: Brief A -> Brief B divider band ---- */
-.brief-divider{background:var(--ink);color:var(--bg);border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);padding:34px 0 38px;margin:36px 0 8px}
-.brief-divider .bd-k{font-family:var(--m);font-size:10px;letter-spacing:.1em;text-transform:uppercase;opacity:.65}
-.brief-divider .bd-end{display:block;font-size:14px;font-weight:600;margin-top:10px;opacity:.75}
-.brief-divider .bd-rule{display:block;height:1px;background:currentColor;opacity:.35;margin:20px 0}
-.brief-divider .bd-start{display:block;font-weight:900;font-size:clamp(26px,7vw,36px);line-height:1.02;letter-spacing:-.04em}
-.brief-divider p{margin:10px 0 0;font-size:14.5px;line-height:1.55;max-width:42ch;opacity:.8}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]) .brief-divider{background:var(--deep);color:var(--ink);border-color:var(--edge)}
-}
+/* Brief A -> Brief B divider: original .brk-band (revisit break) pattern */
+.brief-divider{background:var(--panel);border-top:1px solid var(--edge);border-bottom:1px solid var(--edge);padding:38px 0 40px;margin:0}
+.brief-divider .bd-k{display:block;font-size:13.5px;color:var(--mute);font-weight:500}
+.brief-divider .bd-end{display:block;font-size:13.5px;color:var(--mute);font-weight:500;margin-top:10px}
+.brief-divider .bd-rule{display:block;height:1px;background:var(--edge);margin:20px 0}
+.brief-divider .bd-start{display:block;font-weight:900;font-size:clamp(25px,7vw,32px);line-height:1.05;letter-spacing:-.04em;margin:10px 0 0;text-wrap:balance;max-width:16ch}
+.brief-divider p{margin:12px 0 0;font-size:15px;line-height:1.55;color:var(--ink-2);max-width:40ch}
 
-/* ---- v3: Brief B by-subreddit ---- */
-:root{
-  --h-hermesagent:#5E4B00; --h-hermes-alt:#7A4A21; --h-openclaw:#3F6274; --h-ai-agents:#734A60;
-  --h-claudecode:#2E5E4E; --h-cursor:#7E6220; --h-chatgpt:#2F5D62; --h-openai:#3A3A6B;
-}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --h-hermesagent:#D4BC6A; --h-hermes-alt:#E0B07A; --h-openclaw:#8FB4C6; --h-ai-agents:#C295B0;
-    --h-claudecode:#7FBFA5; --h-cursor:#C8A75C; --h-chatgpt:#86B8BC; --h-openai:#A8A8D8;
-  }
-}
-:root[data-theme="dark"]{
-  --h-hermesagent:#D4BC6A; --h-hermes-alt:#E0B07A; --h-openclaw:#8FB4C6; --h-ai-agents:#C295B0;
-  --h-claudecode:#7FBFA5; --h-cursor:#C8A75C; --h-chatgpt:#86B8BC; --h-openai:#A8A8D8;
-}
-#by-subreddit{scroll-margin-top:110px}
-.grp-intro{margin:0;padding:4px 20px 6px;font-size:14.5px;line-height:1.55;color:var(--ink-2);max-width:var(--measure)}
-.subnav{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:10px 20px 4px}
-.subnav-k{font-family:var(--m);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);width:100%;margin-top:6px}
-.subnav a{display:inline-flex;align-items:center;gap:7px;min-height:36px;padding:4px 10px;border:1px solid var(--edge-soft);text-decoration:none;color:var(--ink);font-size:13px;font-weight:600;background:var(--panel)}
-.subnav a::before{content:"";flex:0 0 auto;width:8px;height:8px;border-radius:50%;background:var(--sub,currentColor)}
-.subnav a em{font-style:normal;font-family:var(--m);font-size:10px;font-weight:400;color:var(--mute)}
-.subgroup-k{padding:22px 20px 0;font-family:var(--m);font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--mute)}
-.subsrc{border-top:2px solid currentColor;margin-top:14px;scroll-margin-top:110px}
-.subsrc-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 12px;padding:14px 20px 2px}
-.subsrc-h h4{margin:0;font-weight:800;font-size:21px;letter-spacing:-.03em;color:currentColor}
-.subtier{font-family:var(--m);font-size:9.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--mute);border:1px solid var(--edge-soft);padding:2px 6px;border-radius:999px}
-.substat{font-family:var(--m);font-size:10.5px;color:var(--mute);font-variant-numeric:tabular-nums}
-.notyet{margin:8px 20px 18px;padding:12px 14px;background:var(--panel);border-left:3px solid currentColor;color:var(--ink-2);font-size:14px;line-height:1.55;max-width:var(--measure)}
+/* Brief B subreddit sections: original community-header (.srch/.srtoggle)
+   pattern at original scale, coloured only with original --h-* hues */
+.subsrc{border-top:1px solid var(--edge);margin:0;padding:0;scroll-margin-top:var(--top)}
+.subsrc-h{max-width:660px;margin:0 auto;padding:8px 20px}
+.subk{display:block;font-family:var(--m);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.subsrc-h h3{margin:0;font-weight:700;font-size:21px;letter-spacing:-.032em;color:currentColor;min-height:44px;display:flex;align-items:center}
+.subline{display:inline-flex;align-items:center;gap:6px;margin:8px 0 10px;font-family:var(--m);font-size:11px;font-weight:500;color:var(--ink-2);font-variant-numeric:tabular-nums;letter-spacing:.01em}
+.subtier{display:inline-flex;align-items:center;gap:3px;padding:1px 6px;background:var(--deep);border-radius:3px;color:var(--ink-2);font-weight:500;font-size:10px}
+.substat{font-variant-numeric:tabular-nums}
+/* placeholder body: original .callout pattern */
+.notyet{width:calc(100% - 40px);max-width:620px;margin:14px auto 16px;padding:14px 16px;background:var(--deep);border-left:3px solid currentColor;font-size:16.5px;line-height:1.62;color:var(--ink-2)}
 .notyet b{color:var(--ink)}
-
-/* ---- v4: full-size subreddit section headers, directly after divider ---- */
-.subsrc{border-top:3px solid currentColor;margin:0;padding:30px 0 12px;scroll-margin-top:64px}
-.subsrc-h{display:block;padding:4px 20px 14px}
-.subk{display:block;font-family:var(--m);font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--mute)}
-.subsrc-h h3{margin:8px 0 0;font-weight:900;font-size:clamp(36px,10vw,54px);line-height:.98;letter-spacing:-.05em;color:currentColor;text-wrap:balance}
-.subline{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin-top:14px}
-.subtier{font-size:10px;padding:3px 8px;color:var(--mute)}
-.substat{display:block;font-size:11px;letter-spacing:.03em}
-.notyet{margin:4px 20px 22px;padding:14px 16px;font-size:14.5px}
-.bbsynth{border-top:3px solid var(--ink);margin-top:30px;padding-top:26px}
+/* moved Brief B synthesis: original week-header rule */
+.bbsynth{border-top:1px solid var(--edge);margin:0}
