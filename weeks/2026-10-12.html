@@ -65,8 +65,11 @@
       </div>
     </div>
 
-<!-- Brief B: subreddit sections start directly after the divider intro above -->
-  <div id="reddit">
+<!-- Brief B: identical title structure to Brief A (.src > .srch > .srtoggle),
+     so its title is sticky at top:var(--top) and foldable exactly like Brief A. -->
+  <section class="src" id="reddit" data-fold="false" style="color:var(--h-hermes)">
+    <div class="srch"><div class="in"><h2><button class="srtoggle" aria-expanded="true">Brief B — Reddit Deep-Dive <span style="font-size:11px;font-family:var(--m);color:var(--mute)">(working title · TODO rename)</span></button></h2></div></div>
+    <div class="fold-wrap"><div>
     <section class="subsrc" id="sub-hermesagent" style="color:var(--h-hermes)">
       <header class="subsrc-h">
         <span class="subk">Brief B · Reddit Deep-Dive · Core</span>
@@ -173,7 +176,8 @@
           <ol class="ed"><li>Keep durable human-readable knowledge in files / Obsidian.</li><li>Add retrieval before a more complex memory backend.</li><li>Convert deterministic recurring work into script-only cron instead of invoking an LLM every tick.</li><li>Put guardrails outside the prompt: least privilege, separate profiles, network isolation.</li></ol>
         </div>
     </section>
-  </div>
+    </div></div>
+  </section>
   </section>
 
   <section class="brk-band"><div class="w"><div class="k">Prototype rhythm</div><h3>One week, two briefs, same page.</h3><p>In the live version, Brief A and Brief B publish together each week, synced in timing and format. This prototype only proves the layout — no collector, scheduler or email delivery is wired.</p></div></section>

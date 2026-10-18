@@ -273,12 +273,13 @@ a.week-row:hover .week-name{text-decoration:underline;text-underline-offset:3px}
 .brief-divider .bd-start{display:block;font-weight:900;font-size:clamp(25px,7vw,32px);line-height:1.05;letter-spacing:-.04em;margin:10px 0 0;text-wrap:balance;max-width:16ch}
 .brief-divider p{margin:12px 0 0;font-size:15px;line-height:1.55;color:var(--ink-2);max-width:40ch}
 
-/* Brief B subreddit sections: original community-header (.srch/.srtoggle)
-   pattern at original scale, coloured only with original --h-* hues */
+/* Brief B subreddit sections: original thread-card heading scale
+   (.tcard h3: 17.5px/700) — one step BELOW the .srtoggle brief titles
+   (21px/700) — coloured only with original --h-* hues */
 .subsrc{border-top:1px solid var(--edge);margin:0;padding:0;scroll-margin-top:var(--top)}
 .subsrc-h{max-width:660px;margin:0 auto;padding:8px 20px}
 .subk{display:block;font-family:var(--m);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
-.subsrc-h h3{margin:0;font-weight:700;font-size:21px;letter-spacing:-.032em;color:currentColor;min-height:44px;display:flex;align-items:center}
+.subsrc-h h3{margin:0;font-weight:700;font-size:17.5px;line-height:1.35;letter-spacing:-.02em;color:currentColor}
 .subline{display:inline-flex;align-items:center;gap:6px;margin:8px 0 10px;font-family:var(--m);font-size:11px;font-weight:500;color:var(--ink-2);font-variant-numeric:tabular-nums;letter-spacing:.01em}
 .subtier{display:inline-flex;align-items:center;gap:3px;padding:1px 6px;background:var(--deep);border-radius:3px;color:var(--ink-2);font-weight:500;font-size:10px}
 .substat{font-variant-numeric:tabular-nums}
