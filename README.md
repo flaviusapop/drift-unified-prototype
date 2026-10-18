@@ -31,7 +31,7 @@ digests combine) is still to be decided by Zander.
 - `index.html` — minimal weeks index only: a vertical list of weeks, each linking to its week page
 - `weeks/2026-10-12.html` — one sample week (Week 42) with both briefs in
   Drift style: `Brief/Week header · date range · strip · Fold all`,
-  foldable sections, a dark Brief A → Brief B divider band, and inside Brief B ten full-size subreddit section headers (big hue display heading, Core/Secondary pill, rule, scanned/kept/shown stat) starting directly after the Brief A→B divider intro; r/hermesagent carries the Brief 35 sample, the other 9 subreddits are 'not yet collected' placeholders, priority-thread cards, top-comments folds
+  foldable sections (Brief A and Brief B sticky tabs sit directly together), and inside Brief B ten full-size subreddit section headers (big hue display heading, Core/Secondary pill, rule, scanned/kept/shown stat) starting under Brief B's own header; r/hermesagent carries the Brief 35 sample, the other 9 subreddits are 'not yet collected' placeholders, priority-thread cards, top-comments folds
 - `style.css` — Drift design DNA copied read-only from `flaviusapop/ai-digest`
   (`src/drift.html`: cream/dark editorial, Chivo + Sometype Mono, 660px
   measure, mobile-first) + small prototype additions (banner, cards)

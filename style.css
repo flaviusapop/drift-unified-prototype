@@ -265,13 +265,6 @@ a.week-row:hover .week-name{text-decoration:underline;text-underline-offset:3px}
 .week-row .arr{font-family:var(--m);font-size:10.5px;color:var(--mute)}
 .week-row.is-disabled .week-name,.week-row.is-disabled .week-meta{color:var(--dead)}
 
-/* Brief A -> Brief B divider: original .brk-band (revisit break) pattern */
-.brief-divider{background:var(--panel);border-top:1px solid var(--edge);border-bottom:1px solid var(--edge);padding:38px 0 40px;margin:0}
-.brief-divider .bd-k{display:block;font-size:13.5px;color:var(--mute);font-weight:500}
-.brief-divider .bd-end{display:block;font-size:13.5px;color:var(--mute);font-weight:500;margin-top:10px}
-.brief-divider .bd-rule{display:block;height:1px;background:var(--edge);margin:20px 0}
-.brief-divider .bd-start{display:block;font-weight:900;font-size:clamp(25px,7vw,32px);line-height:1.05;letter-spacing:-.04em;margin:10px 0 0;text-wrap:balance;max-width:16ch}
-.brief-divider p{margin:12px 0 0;font-size:15px;line-height:1.55;color:var(--ink-2);max-width:40ch}
 
 /* Brief B subreddit sections: original thread-card heading scale
    (.tcard h3: 17.5px/700) — one step BELOW the .srtoggle brief titles
