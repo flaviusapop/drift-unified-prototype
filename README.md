@@ -28,8 +28,8 @@ digests combine) is still to be decided by Zander.
 
 ## Layout
 
-- `index.html` — minimal weeks index only: a vertical list of weeks, each linking to its week page
-- `weeks/2026-10-12.html` — one sample week (Week 42) with both briefs in
+- `index.html` — THE single landing page: weeks stacked newest-first on one page (Week 42 full Brief A + Brief B, Weeks 41/40 as not-collected blocks), with a minimal in-page anchor jump list at the top
+- `weeks/2026-10-12.html` — redirect stub to `index.html#wk-42` (the week now lives on the landing page)
   Drift style: `Brief/Week header · date range · strip · Fold all`,
   foldable sections (Brief A and Brief B sticky tabs sit directly together), and inside Brief B ten full-size subreddit section headers (big hue display heading, Core/Secondary pill, rule, scanned/kept/shown stat) starting under Brief B's own header; r/hermesagent carries the Brief 35 sample, the other 9 subreddits are 'not yet collected' placeholders, priority-thread cards, top-comments folds
 - `style.css` — Drift design DNA copied read-only from `flaviusapop/ai-digest`
@@ -47,7 +47,7 @@ structure/headline. Neither is a new collected edition.
 
 1. Edit HTML/CSS/JS directly (plain static, no build step).
 2. Add a week: copy `weeks/2026-10-12.html`, change the Week header/date,
-   replace sample cards, add a matching week row to the list in `index.html`.
+   replace sample cards, and add a matching week section + anchor row in `index.html`.
 3. Rename briefs: search for `Brief A` / `Brief B` once final names land.
 4. Publish: `git add -A && git commit -m "..." && git push` — GitHub Pages
    serves `main` / root, redeploys in ~1 min.
