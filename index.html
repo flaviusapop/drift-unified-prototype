@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drift Unified — Prototype (Brief A / Brief B)</title>
+<meta name="description" content="Prototype: one Drift-design site hosting two briefs per week — an AI learning brief and a Reddit deep-dive brief. Sample content only.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;500;600;700;900&family=Sometype+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="proto-banner"><div class="w"><span class="badge-proto">Prototype</span><span>Third site — live sites untouched · Sample content only · Names undecided</span></div></div>
+<header class="top"><div class="w"><span class="wm">Drift<em>/unified</em></span><span class="tools"><span class="live">Prototype · 2 briefs / week</span><button id="dens" class="densbtn" aria-pressed="false">Compact</button></span></div></header>
+<main>
+  <div class="w intro">
+    <h1>Two briefs, one week. Read end to end.</h1>
+    <p>One Drift-design home for the pair: <strong>Brief A — AI learning</strong> (what to watch, read and build this week) and <strong>Brief B — Reddit deep-dive</strong> (priority threads, comments worth quoting, and what changes for a real setup).</p>
+    <div class="todo"><b>TODO — naming:</b> “Brief A / Brief B” are placeholders. Final names are being explored separately; rename the two cards, page titles and headers once chosen. Do not promote this prototype over the live sites until Zander approves.</div>
+    <div class="stat">
+      <div><b>2</b><span>briefs per week</span></div>
+      <div><b>~10h</b><span>learning plan</span></div>
+      <div><b>10</b><span>Reddit sources*</span></div>
+      <div><b>1</b><span>sample week</span></div>
+    </div>
+    <p style="margin-top:14px;font-size:12.5px;color:var(--mute)">*Planned Reddit sources, not yet collecting on this prototype: r/hermesagent, r/Hermes, r/OpenClaw, r/AI_Agents, r/ClaudeAI, r/ClaudeCode, r/cursor, r/LocalLLaMA, r/ChatGPT, r/OpenAI. Filtered hard for real, repeated workflows.</p>
+  </div>
+
+  <section class="w week-block" aria-labelledby="w42">
+    <div class="week-title"><h2 id="w42">Week 42</h2><span class="dt" style="font-family:var(--m);font-size:11px;color:var(--mute)">Oct 12 — Oct 18, 2026 · SAMPLE</span></div>
+    <div class="cards">
+      <a class="brief-card" href="weeks/2026-10-12.html#learning">
+        <span class="k">Brief A · AI Learning — working title</span>
+        <h3>What to learn this week</h3>
+        <p>Sample built from the Oct 18 learning-plan structure: exactly 3 Must Watch, then agents &amp; workflows, investing &amp; trading, product &amp; building. About 10 hours, no short-form, no vendor content.</p>
+        <span class="meta"><span>3 Must Watch</span><span>3 topics</span><span>→ Read sample</span></span>
+      </a>
+      <a class="brief-card" href="weeks/2026-10-12.html#reddit">
+        <span class="k">Brief B · Reddit Deep-Dive — working title</span>
+        <h3>Reddit, read end to end</h3>
+        <p>Sample reusing the Brief 35 structure (Aug 21–26): priority threads, top comments worth quoting, executive read and “for our setup”. Labelled prototype — not a new collection.</p>
+        <span class="meta"><span>206 posts read*</span><span>14 kept*</span><span>→ Read sample</span></span>
+      </a>
+    </div>
+    <p style="font-size:12px;color:var(--mute)">*Brief 35 sample figures, reused for layout only.</p>
+  </section>
+
+  <section class="w week-block" aria-labelledby="w41">
+    <div class="week-title"><h2 id="w41">Week 41</h2><span style="font-family:var(--m);font-size:11px;color:var(--mute)">Oct 5 — Oct 11, 2026 · NOT COLLECTED</span></div>
+    <div class="cards">
+      <span class="brief-card disabled"><span class="k">Brief A · AI Learning</span><h3>Not collected</h3><p>Placeholder card showing how earlier weeks will list. No fabricated content.</p><span class="meta"><span>header only</span></span></span>
+      <span class="brief-card disabled"><span class="k">Brief B · Reddit Deep-Dive</span><h3>Not collected</h3><p>Placeholder card showing how earlier weeks will list. No fabricated content.</p><span class="meta"><span>header only</span></span></span>
+    </div>
+  </section>
+
+  <footer><div class="w">
+    <p><strong>Prototype only.</strong> This is a third, separate site for iterating on the unified 2-brief design. It does not replace <a href="https://flaviusapop.github.io/ai-digest/drift.html">Drift (ai-digest)</a> or the <a href="https://flaviusapop.github.io/weekly-ai-learning-plan/">Weekly AI learning plan</a>, and neither live site was modified to build it.</p>
+    <p>Design DNA copied read-only from flaviusapop/ai-digest (Drift): dark/cream editorial, Chivo + Sometype Mono, “Brief N · date range · Unfold all” headers, density strip, foldable sections.</p>
+  </div></footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
