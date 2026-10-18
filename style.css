@@ -311,3 +311,14 @@ a.week-row:hover .week-name{text-decoration:underline;text-underline-offset:4px}
 .substat{font-family:var(--m);font-size:10.5px;color:var(--mute);font-variant-numeric:tabular-nums}
 .notyet{margin:8px 20px 18px;padding:12px 14px;background:var(--panel);border-left:3px solid currentColor;color:var(--ink-2);font-size:14px;line-height:1.55;max-width:var(--measure)}
 .notyet b{color:var(--ink)}
+
+/* ---- v4: full-size subreddit section headers, directly after divider ---- */
+.subsrc{border-top:3px solid currentColor;margin:0;padding:30px 0 12px;scroll-margin-top:64px}
+.subsrc-h{display:block;padding:4px 20px 14px}
+.subk{display:block;font-family:var(--m);font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--mute)}
+.subsrc-h h3{margin:8px 0 0;font-weight:900;font-size:clamp(36px,10vw,54px);line-height:.98;letter-spacing:-.05em;color:currentColor;text-wrap:balance}
+.subline{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin-top:14px}
+.subtier{font-size:10px;padding:3px 8px;color:var(--mute)}
+.substat{display:block;font-size:11px;letter-spacing:.03em}
+.notyet{margin:4px 20px 22px;padding:14px 16px;font-size:14.5px}
+.bbsynth{border-top:3px solid var(--ink);margin-top:30px;padding-top:26px}
