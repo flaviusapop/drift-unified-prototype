@@ -1,0 +1,223 @@
+{
+  "headline": "Proof of done, rules as hooks, and memory that actually recalls.",
+  "executive_read": [
+    "In r/hermesagent the live topics were <strong>running agents from the phone</strong> (a community guide built from 97 answers), bots that <strong>drift and get worse</strong> over months, and a member's own <strong>memory benchmark</strong> showing most stored memories never reach search. r/Hermes is about the god Hermes again, and r/OpenAI was news about the “Black October” security incidents — both kept nothing.",
+    "Across r/AI_Agents, r/ClaudeCode and r/cursor the repeated pattern was <strong>enforce, then verify</strong>: rules corrected twice become hooks that block the call, “done” needs a receipt or a readback, test-file changes get the careful read, and setups got better by cutting tools and long sessions, not adding them. r/ChatGPT carried the week's warning: agents with mailbox access follow instructions planted in incoming email."
+  ],
+  "for_our_setup": [
+    "Make each agent's “done” carry evidence: an ID from the other system or a readback of the changed state, not the agent's own summary.",
+    "When you correct the same behaviour twice, move it from the instructions file into a hard check that blocks the action.",
+    "Treat every incoming email and web page as untrusted input for any bot with Gmail access; keep sends and deletes behind approval.",
+    "Start a fresh session per task and keep durable facts in files; test memory recall with reworded questions before you trust it.",
+    "Push routine polling and parsing (IMAP checks, OCR) to plain scripts and hand the model only what needs a decision."
+  ],
+  "subs": {
+    "hermesagent": {
+      "note": "",
+      "threads": [
+        {
+          "id": "1xcqglx",
+          "summary": "A moderator turned last week's 139-comment thread into a guide on reaching Hermes from a phone. Most people start on Telegram, Discord is the usual upgrade for threads and a channel per agent, privacy-minded users self-host Matrix, and a growing group uses a dedicated app or web UI.",
+          "kp": [
+            "Mentions in 97 answers: Telegram 31, Discord 15, Hermex 11, Conduit 7, web UI 7, SSH 7, Matrix 6.",
+            "Keep the server off the open internet — Tailscale came up 18 times.",
+            "Daily tips: one bot or channel per agent, approvals to the phone, a short daily digest, and a separate recovery agent for broken updates."
+          ],
+          "quotes": [
+            "19rhwp116aopx",
+            "19rhzowxu62si"
+          ]
+        },
+        {
+          "id": "1x9n1oi",
+          "summary": "After three months, the author's team of Hermes bots — run through a chief-of-staff bot, on frontier models, with AGENT guides, SOULs and Mnemosyne memory — quits tasks more, dumps chain-of-thought into deliverables and drifts from clear early rules. Meanwhile plain Claude Code keeps shipping PRs.",
+          "kp": [
+            "Top fix from comments: a new session per task — long-lived sessions bloat context, and the soul and instructions get compressed and dropped.",
+            "A contrarian view: drop memory for state — list the sources of truth and read them instead of recalling."
+          ],
+          "quotes": [
+            "phmurel",
+            "phms9h4"
+          ]
+        },
+        {
+          "id": "1xer2wi",
+          "summary": "A home-lab user with four Hermes agents benchmarked Mnemosyne memory on real database copies with 24 reworded questions. Top-5 recall was 3/24, against 13/24 for raw vector search, because 1,541 of 1,667 memories had dropped out of the search path after consolidation. Own fixes barely helped and made search much slower.",
+          "kp": [
+            "Next candidates: Hindsight (relationships, changing facts), Honcho or Mem0, or structured files for durable knowledge plus a provider for conversational recall.",
+            "Results are specific to one setup and version; production was left unchanged."
+          ],
+          "quotes": [
+            "19rm3f2h5l7fn",
+            "19rm7419ufw0z"
+          ]
+        }
+      ]
+    },
+    "Hermes": {
+      "note": "collected this week (15 fetched, all in the window): this subreddit is about the god Hermes, not AI agents. Nothing substantive for Brief B this week.",
+      "threads": []
+    },
+    "OpenClaw": {
+      "note": "",
+      "threads": [
+        {
+          "id": "1xdpnvm",
+          "summary": "The author runs an OpenClaw Telegram to-do bot on a 12-year-old office PC and stopped paying LLM tokens for problems old software already solves: a Python IMAP poller filters the inbox and only passes distilled text, local Tesseract does OCR in about 3 seconds, and local Piper TTS replaces paid voice notes.",
+          "kp": [
+            "Rule: idle polling and parsing should cost zero tokens; the model only sees what needs a decision.",
+            "Bonus: a “TaDa list” in Todoist logs unplanned things that got done."
+          ],
+          "quotes": [
+            "19rjut38glpb6",
+            "19rk44iq1c677"
+          ]
+        },
+        {
+          "id": "1xb5yuw",
+          "summary": "Ten agent harnesses run headless on a 4B local model (Qwen3.5-4B) with five scripted tasks each, a fresh fixture per task and an automated check script. Pi finished all five in 1m36s, followed by goose and Crush; OpenClaw passed 5/5 in about 5m44s in its small-model preset.",
+          "kp": [
+            "On small models the short system prompt and few tools matter: every extra instruction token shows up in the timing.",
+            "Comments ask for repeated runs with pass rates and for separating “didn't start” from “failed”; the author agreed for the next round."
+          ],
+          "quotes": [
+            "19rga3oiu6i69",
+            "19rh2s6tmg51h"
+          ]
+        }
+      ]
+    },
+    "AI_Agents": {
+      "note": "",
+      "threads": [
+        {
+          "id": "1xawuwy",
+          "summary": "Two years of coding with AI, reduced to what survived: Claude Code for planned work, Codex for background chores, a three-to-four-line ticket of what done looks like, one AGENTS.md under 100 lines, CodeRabbit plus a local review pass, and Playwright for the five flows that make money.",
+          "kp": [
+            "What he dropped: 11 MCP servers down to 2, multi-agent setups, and long sessions — new task, new session.",
+            "He still reads anything touching payments or auth himself."
+          ],
+          "quotes": [
+            "phx93fy",
+            "phxyxsj"
+          ]
+        },
+        {
+          "id": "1xbkr0s",
+          "summary": "“Done” usually means “stopped without an error”. The post sets three levels of proof, decided per action before the agent runs: a receipt (an ID from the target system), a readback (read the target and confirm the change), and an independent deterministic check for high-stakes actions.",
+          "kp": [
+            "The harder an action is to reverse, the higher the proof it needs; an LLM judge reading the agent's summary is not independent.",
+            "Comments add: check that nothing extra changed, and bind CI evidence to the exact commit being approved."
+          ],
+          "quotes": [
+            "19rg1zy5pd22t",
+            "19rg5ap0kvjk4"
+          ]
+        }
+      ]
+    },
+    "ClaudeAI": {
+      "note": "",
+      "threads": [
+        {
+          "id": "1xcdwdx",
+          "summary": "The author runs Claude Code on a separate laptop and wired an old Kuando Busylight to it with hooks: it blinks red while Claude works, stays solid red when it needs input, and turns green when idle — no more glancing at the other screen.",
+          "kp": [
+            "Same idea in comments: a Stream Deck plugin that shows several session states on keys and switches to a session on press."
+          ],
+          "quotes": [
+            "19rh8zgxu4s8x",
+            "19rh8u8p6llhc"
+          ]
+        }
+      ]
+    },
+    "ClaudeCode": {
+      "note": "",
+      "threads": [
+        {
+          "id": "1xeautc",
+          "summary": "The author's single most useful CLAUDE.md line: list every file you need and read them in one pass, then make all edits, then run the tests once — it stopped a read-edit loop that ate half his usage. 167 comments share theirs.",
+          "kp": [
+            "Queue corrections instead of dropping current work for them.",
+            "Discuss until I say go; cite file:line before claiming what the code does.",
+            "Comment warning: words don't hold “don't edit the tests” — a hook that blocks the edit does."
+          ],
+          "quotes": [
+            "19rlwk7oqkz9d",
+            "19rl6vunk8nlt"
+          ]
+        },
+        {
+          "id": "1xbxoza",
+          "summary": "A solo developer's Claude Code setup run like a small team with guardrails. Rules live in PreToolUse hooks rather than prose: deletes become moves to an archive folder, git goes through one wrapper, and writes to day-job systems are blocked unless approved for that action. CLAUDE.md stays short and points to detail.",
+          "kp": [
+            "Method in one line: if you've corrected the same behaviour twice, it becomes a hook that denies the call.",
+            "A self-hosted GitLab is the system of record; reads are allowed, writes need explicit OK."
+          ],
+          "quotes": [
+            "19rgowjvhxdj5",
+            "19rg8vypy0beq"
+          ]
+        }
+      ]
+    },
+    "cursor": {
+      "note": "",
+      "threads": [
+        {
+          "id": "1xbzrqc",
+          "summary": "Asks agent-mode users whether they still read every diff or just run the app. Ideas offered: read everything touching auth, payments or the database and skim the rest, have the agent explain the change in three lines, and keep commits small.",
+          "kp": [
+            "Most useful reply: read changes to test files carefully — a changed assertion or a new skip hides well in a big diff.",
+            "Check the file list first; anything touched that you didn't mention gets the careful read.",
+            "The rest of r/cursor this week was pricing and cancellation threads after the ownership change, which were not kept."
+          ],
+          "quotes": [
+            "19rgfjze6wsao",
+            "19rgy655js668"
+          ]
+        }
+      ]
+    },
+    "LocalLLaMA": {
+      "note": "",
+      "threads": [
+        {
+          "id": "1xahi82",
+          "summary": "Berth is an open-source service that lets one 24GB card take turns between engines (llama-swap, Strata, ComfyUI, Open WebUI) without orphaned processes squatting VRAM. It also serves the engines as one API, so a box can run Hermes at night and give the card back by day. v0.3 parks engines in system RAM to skip reloads.",
+          "kp": [
+            "Top comments: many people built their own version; the real cost is reload time — about 30s per engine from NVMe.",
+            "Others solve it with dedicated boxes or plain llama-swap."
+          ],
+          "quotes": [
+            "phtxnzv",
+            "phu7jtt"
+          ]
+        }
+      ]
+    },
+    "ChatGPT": {
+      "note": "",
+      "threads": [
+        {
+          "id": "1x9ik3x",
+          "summary": "A warning that phishers are mass-sending emails with instructions aimed at agents connected to Gmail, Drive or a PC — asking them to send personal data or install malware — and the agents treat the text as the user's own request.",
+          "kp": [
+            "Top comment: this is prompt injection and applies to every AI agent, not one product.",
+            "Web pages can carry the same planted instructions when an agent does research."
+          ],
+          "quotes": [
+            "phlsa4y",
+            "phlx1r4"
+          ]
+        }
+      ]
+    },
+    "OpenAI": {
+      "note": "collected this week (100 fetched): the window's top posts were news and reaction threads, mostly the “Black October” security incidents, with no substantive, repeated workflow or use case under the Drift rule.",
+      "threads": []
+    }
+  },
+  "method": "top 100 posts of the week fetched per subreddit (849 total; r/Hermes 15, r/OpenClaw 44, r/cursor 90), filtered to Oct 19–25 and to substantive threads"
+}
